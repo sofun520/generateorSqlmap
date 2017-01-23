@@ -5,13 +5,13 @@
 
 <generatorConfiguration>
 	<context id="testTables" targetRuntime="MyBatis3">
-		<commentGenerator>
+		<commentGenerator type="MyCommentGenerator">
 			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-			<property name="suppressAllComments" value="true" />
+			<!-- <property name="suppressAllComments" value="false" /> -->
 		</commentGenerator>
 		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/jettyTestRun" userId="root"
+			connectionURL="jdbc:mysql://localhost:3306/udfm2_dev" userId="root"
 			password="123456">
 		</jdbcConnection>
 
@@ -49,7 +49,7 @@
 		<!-- 指定数据库表 -->
 
 
-		<table tableName="user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="flase" enableUpdateByExample="false" ></table>
+		<table tableName="cms_news" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="flase" enableUpdateByExample="false" ></table>
 
 
 		<!-- 有些表的字段需要指定java类型 <table schema="" tableName=""> <columnOverride column="" 
